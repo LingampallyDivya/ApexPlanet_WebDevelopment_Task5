@@ -1,0 +1,48 @@
+<!-- ===== index.html ===== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ShopLite • Vanilla JS Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#" aria-label="ShopLite home">
+        <span class="logo">🛒</span><span>ShopLite</span>
+      </a>
+      <div class="controls" role="search">
+        <input id="q" type="search" placeholder="Search products…" aria-label="Search products" />
+        <select id="category" aria-label="Filter by category">
+          <option value="all">All</option>
+          <option>Accessories</option>
+          <option>Apparel</option>
+          <option>Gadgets</option>
+          <option>Home</option>
+        </select>
+        <button id="reset" class="btn" aria-label="Reset filters">Reset</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section aria-labelledby="products-heading">
+      <h2 id="products-heading">Products</h2>
+      <div class="grid products" id="products"></div>
+    </section>
+  </main>
+
+  <aside class="cart" aria-labelledby="cart-heading">
+    <h3 id="cart-heading">Cart</h3>
+    <div id="cartItems"></div>
+    <div class="total"><span>Total</span><span id="cartTotal">₹0</span></div>
+  </aside>
+
+  <footer>© <span id="year"></span> ShopLite Demo</footer>
+
+  <script src="script.js"></script>
+  <noscript><div class="container"><p class="pill">Enable JavaScript to use the cart.</p></div></noscript>
+</body>
+</html>
